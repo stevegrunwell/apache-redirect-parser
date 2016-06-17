@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+namespace SteveGrunwell\ApacheRedirectParser;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../src/ApacheRedirectParser/ApacheRedirectParser.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new ApacheRedirectParser());
+$application->run();
